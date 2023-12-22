@@ -155,7 +155,7 @@ void SubghzApp_Init(void)
 {
   /* USER CODE BEGIN SubghzApp_Init_1 */
 
-  APP_LOG(TS_OFF, VLEVEL_M, "\n\rPING PONG\n\r");
+  APP_LOG(TS_OFF, VLEVEL_M, "\n\LoRa\n\r");
   /* Get SubGHY_Phy APP version*/
   APP_LOG(TS_OFF, VLEVEL_M, "APPLICATION_VERSION: V%X.%X.%X\r\n",
           (uint8_t)(APP_VERSION_MAIN),
@@ -334,23 +334,29 @@ static void PingPong_Process(void)
 {
     while(1) // Pętla nieskończona
     {
-    	HAL_GPIO_WritePin(Green_LED_GPIO_Port, Green_LED_Pin, GPIO_PIN_SET);
         if(HAL_GPIO_ReadPin(Button_GPIO_Port, Button_Pin) == 1) // Sprawdzenie stanu przycisku
         {
             Radio.Standby(); // Przejście z trybu uśpienia do trybu gotowości
+            HAL_GPIO_WritePin(Green_LED_GPIO_Port, Green_LED_Pin, GPIO_PIN_RESET);
             State = TX;
             memcpy(BufferTx, PING, sizeof(PING) - 1);
             APP_LOG(TS_ON, VLEVEL_L, "..."
             						"PING"
             						"\n\r");
             Radio.Send(BufferTx, PAYLOAD_LEN);
-            HAL_Delay(1000);
+            HAL_Delay(150);
+            Radio.Send(BufferTx, PAYLOAD_LEN);
+            HAL_Delay(150);
+            Radio.Send(BufferTx, PAYLOAD_LEN);
+            HAL_Delay(150);
+            HAL_GPIO_WritePin(Green_LED_GPIO_Port, Green_LED_Pin, GPIO_PIN_SET);
+
+
         }
         else
         {
             // Utrzymanie radia w trybie uśpienia
             Radio.Sleep();
-            HAL_Delay(1000);
         }
     }
 }
