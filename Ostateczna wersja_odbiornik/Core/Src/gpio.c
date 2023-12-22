@@ -92,6 +92,7 @@ void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(RF_SW_CTRL2_GPIO_Port, &GPIO_InitStruct);
 
+  HAL_GPIO_WritePin(GPIOA,Green_LED_Pin, GPIO_PIN_SET);
 }
 
 /* USER CODE BEGIN 2 */
