@@ -155,7 +155,7 @@ void SubghzApp_Init(void)
 {
   /* USER CODE BEGIN SubghzApp_Init_1 */
 
-  APP_LOG(TS_OFF, VLEVEL_M, "\n\rPING PONG\n\r");
+  APP_LOG(TS_OFF, VLEVEL_M, "\n\rLoRa\n\r");
   /* Get SubGHY_Phy APP version*/
   APP_LOG(TS_OFF, VLEVEL_M, "APPLICATION_VERSION: V%X.%X.%X\r\n",
           (uint8_t)(APP_VERSION_MAIN),
@@ -334,8 +334,11 @@ static void PingPong_Process(void)
     		{
     			if (strncmp((const char *)BufferRx, PING, sizeof(PING) - 1) == 0)
     			{
-    				HAL_GPIO_TogglePin(Green_LED_GPIO_Port, Green_LED_Pin);
+    				HAL_GPIO_WritePin(GPIOA, Buzzer_Pin, GPIO_PIN_SET);
+    				HAL_Delay(1000);
+    				HAL_GPIO_WritePin(GPIOA, Buzzer_Pin, GPIO_PIN_RESET);
     				APP_LOG(TS_ON, VLEVEL_L, "Odebrano PING\n\r");
+
     				Radio.Rx(RX_TIMEOUT_VALUE);
     			}
     		}
