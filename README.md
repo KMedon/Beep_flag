@@ -17,7 +17,7 @@ A pivotal aspect of the project is the meticulously designed PCBs for the flag a
 # Software
 A standout feature of the software is the intuitive interaction between the referee flags and the receiver. When a referee presses the button on a flag, it triggers a buzzer on the receiver unit. This immediate audio feedback ensures that messages are conveyed promptly and unmistakably, supporting referees in maintaining focus on the game without distractions.
 
-The software is crafted with attention to efficiency and responsiveness, ensuring seamless communication between devices. Detailed documentation and source code are available in the src folder, inviting exploration and modification.
+The software is crafted with attention to efficiency and responsiveness, ensuring seamless communication between devices. 
 
 # Features
 Long-range LoRa communication (868 MHz) tailored for referees in lower leagues
