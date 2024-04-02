@@ -14,6 +14,9 @@ The project extends beyond software and communication technologies to include de
 # PCB Design
 A pivotal aspect of the project is the meticulously designed PCBs for the flag and receiver units. These designs prioritize low power consumption and effective LoRa communication, with durability and component reliability being key considerations to withstand the physical demands of football matches.
 
+![image](https://github.com/KMedon/Football-Referee-Flags-with-LoRa-Communication/assets/115714477/bf74e438-9cad-427d-9a8c-848fea43c87e)
+
+
 # Software
 A standout feature of the software is the intuitive interaction between the referee flags and the receiver. When a referee presses the button on a flag, it triggers a buzzer on the receiver unit. This immediate audio feedback ensures that messages are conveyed promptly and unmistakably, supporting referees in maintaining focus on the game without distractions.
 
