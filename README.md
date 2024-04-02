@@ -15,10 +15,17 @@ The project extends beyond software and communication technologies to include de
 A pivotal aspect of the project is the meticulously designed PCBs for the flag and receiver units. These designs prioritize low power consumption and effective LoRa communication, with durability and component reliability being key considerations to withstand the physical demands of football matches.
 
 ![image](https://github.com/KMedon/Football-Referee-Flags-with-LoRa-Communication/assets/115714477/bf74e438-9cad-427d-9a8c-848fea43c87e)
+![image](https://github.com/KMedon/Football-Referee-Flags-with-LoRa-Communication/assets/115714477/43ad8579-ea21-40b5-8caa-a2f216ee5260)
+![image](https://github.com/KMedon/Football-Referee-Flags-with-LoRa-Communication/assets/115714477/d8918f51-6ccb-48e6-b317-bfb30570b51f)
+
 
 
 # Software
 A standout feature of the software is the intuitive interaction between the referee flags and the receiver. When a referee presses the button on a flag, it triggers a buzzer on the receiver unit. This immediate audio feedback ensures that messages are conveyed promptly and unmistakably, supporting referees in maintaining focus on the game without distractions.
+
+![image](https://github.com/KMedon/Football-Referee-Flags-with-LoRa-Communication/assets/115714477/d6f56f7a-f1c9-4e1a-9925-95ccdd78d40c)
+![image](https://github.com/KMedon/Football-Referee-Flags-with-LoRa-Communication/assets/115714477/adb739a7-97d2-4232-9e1e-70ce60794431)
+
 
 The software is crafted with attention to efficiency and responsiveness, ensuring seamless communication between devices. 
 
